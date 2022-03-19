@@ -21,7 +21,7 @@ class myThread (threading.Thread):
         ending_time = time.time() #Time when acknowledged the request
         elapsed_time = str(ending_time - initial_time)
         print('The Round Trip Time is {}'.format(elapsed_time))
-        print('Hostname of the server: ' + socket.gethostname())
+        #print('Hostname of the server: ' + socket.gethostname())
         print "Exiting " + self.name
 
 # Form the HTTP header response to be sent to the client
