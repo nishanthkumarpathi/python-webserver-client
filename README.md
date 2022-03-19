@@ -64,4 +64,13 @@ For example : python2.7 client.py webserver_host webserver_port requested_filena
 python2.7 client.py localhost 8080 index.html
 ```
 
+# Refrence URL's
+
+http://users.pja.edu.pl/~jms/qnx/help/tcpip_4.25_en/prog_guide/sock_advanced_tut.html
+
+https://realpython.com/python-sockets/
+
+https://cs.lmu.edu/~ray/notes/pythonnetexamples/
+
+https://www.binarytides.com/receive-full-data-with-the-recv-socket-function-in-python/
 

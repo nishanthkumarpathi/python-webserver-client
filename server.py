@@ -15,14 +15,13 @@ class myThread (threading.Thread):
         self.name = name
         self.connectionSocket = connectionsocket
     def run(self):
-        print "Starting " + self.name
         initial_time = time.time() #Store the time when request is sent
         handleNewConnection(self.name, self.connectionSocket)
         ending_time = time.time() #Time when acknowledged the request
         elapsed_time = str(ending_time - initial_time)
         print('The Round Trip Time is {}'.format(elapsed_time))
-        #print('Hostname of the server: ' + socket.gethostname())
-        print "Exiting " + self.name
+        print('Hostname of the server: ' + gethostname())
+        print('Socket IP:' + str(AF_INET))
 
 # Form the HTTP header response to be sent to the client
 def formHeaderResponse():
@@ -42,7 +41,7 @@ def webPageResponse(wpSize, wpName):
 # Form the HTTP 404 response to be sent to the client
 def serve404Response(filename, isGetRequest):
     html = ("<h1><center>Error 404: File not found!</h1><br>"
-            "<center>You have requested for a non existing file: <b>" + filename[1:] + "</b><br><br>"
+            "<center>File is not Existing: <b>" + filename[1:] + "</b><br><br>"
             "Please try another file</center>")
 
     response = ("HTTP/1.1 404 Not Found\r\n"
